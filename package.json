@@ -1,13 +1,13 @@
 {
-  "name": "backend-proyecto4",
+  "name": "api",
   "version": "1.0.0",
-  "description": "backend del proyecto \"sistema de evaluaciones UNSTA\"",
+  "description": "api para mongo",
   "main": "index.js",
   "scripts": {
     "start": "babel-node src/index.js",
     "dev": "nodemon --exec babel-node src/index.js"
   },
-  "author": "Matias Choquevilca, Fernando Nogues, Joaquin Fernandez",
+  "author": "Matias Choquevilca",
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.26.0",
