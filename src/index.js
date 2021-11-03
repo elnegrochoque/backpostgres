@@ -22,4 +22,4 @@ app.use(express.urlencoded({extended:true}));
 //agrego la carpeta public como estatica
 app.use(express.static(path.join(__dirname,'../public')));
 
-app.use('/api',dataRoutes);
+app.use('/',dataRoutes);

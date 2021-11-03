@@ -2,6 +2,10 @@ import Data from "../models/data.model";
 
 const dataCtrl = {};
 
+dataCtrl.getPrueba = (req,res)=>{
+    res.send("prueba")
+}
+
 dataCtrl.listarData = async (req, res) => {
     try {
         // obtener un areglo con todos los datos
@@ -122,4 +126,5 @@ dataCtrl.hola = async (req, res) => {
     }
 
 }
+
 export default dataCtrl;

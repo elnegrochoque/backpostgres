@@ -4,8 +4,6 @@ import dataCtrl from "../controllers/data.controllers";
 
 const router = Router();
 
-
-
 router.route("/api")
     .get(dataCtrl.listarData)
     .post(dataCtrl.crearData)
