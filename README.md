@@ -33,3 +33,7 @@ Metdodo DELETE: ELimina el archivo con el id pasado como parametro en la ruta.
 # Conexion a la BD
 
 La conexion a la BD esta dada en el archivo /src/database.js const url
+
+# Para ejecucion despues de clonar el repositorio
+## Utilizar comando
+  npm run dev
