@@ -2,6 +2,8 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from "cors";
 import path from 'path';
+import "./database.js";
+import dataRoutes from './routes/data.routes';
 //creo una instancia de express
 const app = express();
 
@@ -20,8 +22,4 @@ app.use(express.urlencoded({extended:true}));
 //agrego la carpeta public como estatica
 app.use(express.static(path.join(__dirname,'../public')));
 
-//crear ruta
-app.get('/', (req,res)=>{
-    res.send("Hola desde del backend")
-
-})
+app.use('/api',dataRoutes);
