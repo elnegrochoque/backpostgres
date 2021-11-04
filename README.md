@@ -2,6 +2,17 @@
 
 APi que contiene los metodos GET, POST, PUT y DELETE para un JSON 
 
+# Instalacion
+
+Para el funcionamiento de la api se instalaron las siguientes herramientas
+
+npm install express --save
+npm install babel-cli babel-preset-env
+npm install -D nodemon
+npm i morgan cors
+npm install mongoose --save
+
+
 # Ejemplo del modelo del archivo JSON
 
 var data = {
@@ -33,6 +44,8 @@ Metdodo DELETE: ELimina el archivo con el id pasado como parametro en la ruta.
 # Conexion a la BD
 
 La conexion a la BD esta dada en el archivo /src/database.js const url
+
+
 
 # Para ejecucion despues de clonar el repositorio
 ## Utilizar comando
