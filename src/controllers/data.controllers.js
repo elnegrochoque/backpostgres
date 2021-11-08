@@ -29,7 +29,7 @@ dataCtrl.crearData = async (req, res) => {
 
     try {
         const {
-            location,
+            locationid,
             status,
             firstname,
             lastname,
@@ -44,7 +44,7 @@ dataCtrl.crearData = async (req, res) => {
         } = req.body
         //crear el nuevo objeto
         const dataNew = new Data({
-            location,
+            locationid,
             status,
             firstname,
             lastname,
@@ -59,7 +59,7 @@ dataCtrl.crearData = async (req, res) => {
         });
         console.log(dataNew.location);
         const arregloData = await pool.query('INSERT INTO base.client(locationid, firstname, lastname, phone, email, residence, propertysarch, isolder, acceptterms, accepimage) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10);',
-            [dataNew.location, dataNew.firstname, dataNew.lastname, dataNew.phone, dataNew.email, dataNew.residence, dataNew.propertySearch, dataNew.isOlder, dataNew.acceptTerms, dataNew.acceptImage]);
+            [dataNew.locationid, dataNew.firstname, dataNew.lastname, dataNew.phone, dataNew.email, dataNew.residence, dataNew.propertySearch, dataNew.isOlder, dataNew.acceptTerms, dataNew.acceptImage]);
         res.status(201).json({
             mensaje: "Dato agregado a la BD"
         })

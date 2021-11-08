@@ -1,7 +1,7 @@
 import mongoose, { Schema } from "mongoose"
 
 const dataSchema = new Schema({
-    location:{} ,
+    locationid:{} ,
     status:{},
     firstname:{},
     lastname:{},
