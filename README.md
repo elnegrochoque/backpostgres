@@ -11,12 +11,11 @@ npm install babel-cli babel-preset-env
 npm install -D nodemon
 npm i morgan cors
 npm install mongoose --save
+npm install pg
 
-
-# Ejemplo del modelo del archivo JSON
-
-var data = {
-      'location': "Arena Miami",
+# Ejemplo del modelo del archivo JSON para metodo GET
+data = {
+      'idlocation': 1,
       'status': "Pending",
       'firstname': firstNameController.text,
       'lastname': lastNameController.text,
@@ -24,10 +23,26 @@ var data = {
       'email': emailController.text,
       'residence': country,
       'propertySearch':resident,
-      'isOlder':true,
-      'acceptTerms':true,
-      'acceptImage':optoutImage,
+      'isOlder': 1,
+      'acceptTerms': 1,
+      'acceptImage': 1,
       'createdDate': new DateTime.now(),
+    };
+
+# Ejemplo del modelo del archivo JSON para metodo POST
+
+data = {
+      'idlocation': 1,
+      'status': "Pending",
+      'firstname': firstNameController.text,
+      'lastname': lastNameController.text,
+      'phone': phoneController.text,
+      'email': emailController.text,
+      'residence': country,
+      'propertySearch':resident,
+      'isOlder': 1,
+      'acceptTerms': 1,
+      'acceptImage': 1
     };
 
 # Metodos y rutas
@@ -43,9 +58,7 @@ Metdodo DELETE: ELimina el archivo con el id pasado como parametro en la ruta.
 
 # Conexion a la BD
 
-La conexion a la BD esta dada en el archivo /src/database.js const url
-
-
+La conexion a la BD esta dada en el archivo /src/database.js const pool
 
 # Para ejecucion despues de clonar el repositorio
 ## Utilizar comando

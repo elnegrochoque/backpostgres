@@ -1,13 +1,10 @@
-import mongoose from "mongoose";
-
-// const url corresponde a la url de la base de datos
-
-const url = 'mongodb://localhost:27017/apidevelone'
-
-
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
-
-const connection = mongoose.connection;
-connection.once('open', () => {
-    console.log('BD conectada')
+const {Pool} = require('pg')
+const pool = new Pool({
+    host: 'localhost',
+    user: 'postgres',
+    password: 'password',
+    database: 'prueba1',
+    port: '5432'
 })
+
+export default pool;

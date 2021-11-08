@@ -5,6 +5,7 @@ import dataCtrl from "../controllers/data.controllers";
 const router = Router();
 
 router.route("/api")
+    //.get(dataCtrl.getPrueba)
     .get(dataCtrl.listarData)
     .post(dataCtrl.crearData)
 router.route("/api/:id")
